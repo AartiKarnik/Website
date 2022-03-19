@@ -1,0 +1,46 @@
+﻿@*@inherits Umbraco.Web.Mvc.UmbracoViewPage < Umbraco.Web.PublishedModels.>
+@using ContentModels = Umbraco.Web.PublishedModels;*@
+
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.StudentInfoDocType>
+@using ContentModels = Umbraco.Web.PublishedModels;
+
+
+@{
+    Layout = null;
+}
+<html>
+<head>
+</head>
+<body>
+    <table>
+        <thead><h1>Student Table first 3 properties display</h1></thead>
+        <tbody>
+            <tr>
+                <td><h1>Student Name :</h1></td>
+                <td><h1>@Model.StudentName</h1></td>
+            </tr>
+            <tr>
+                <td><h1>Student Degree</h1></td>
+                <td><h1>@Model.StudentDegree</h1></td>
+            </tr>
+
+            <tr>
+                <td><h1>Student Course:</h1></td>
+                <td><h1>@Model.StudentCourse</h1></td>
+            </tr>
+            @*<tr>
+                <td><h1>Student DOB:</h1></td>
+                <td><h1>@Model.StudentDob</h1></td>
+            </tr>
+            <tr>
+                <td><h1>Student EmailAddress:</h1></td>
+                <td><h1>@Model.StudentEmail</h1></td>
+            </tr>
+            <tr>
+                <td><h1>Student Grades:</h1></td>
+                <td><h1>@Model.StudentGrades</h1></td>
+            </tr>*@
+        </tbody>
+    </table>
+</body>
+</html>

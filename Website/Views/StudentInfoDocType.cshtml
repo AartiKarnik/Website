@@ -1,0 +1,86 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.StudentInfoDocType>
+
+@using ContentModels = Umbraco.Web.PublishedModels;
+@using Website.Controllers
+
+
+@*@inherits Umbraco.Web.Mvc.UmbracoViewPage*@
+@{ Layout = null;
+    var items3 = Model.Value<IEnumerable<IPublishedElement>>("testimonialSlider");
+    }
+
+@* the fun starts here
+     var items2 = Model.Value<IEnumerable<IPublishedElement>>("testimonialSlider"); 
+    *@
+<h1>Hello World</h1>
+<html>
+<head>
+</head>
+<body>
+    <table>
+        <thead><h1>Student Table Last 3 properties</h1></thead>
+        <tbody>
+            <tr>
+                <td><h1>Student DOB:</h1></td>
+                <td><h1>@Model.StudentDob</h1></td>
+            </tr>
+            <tr>
+                <td><h1>Student EmailAddress:</h1></td>
+                <td><h1>@Model.StudentEmail</h1></td>
+            </tr>
+            <tr>
+                <td><h1>Student Grades:</h1></td>
+                <td><h1>@Model.StudentGrades</h1></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <thead><h1>StudentList</h1></thead>
+        <tbody>
+            @{ var items = Model.Value<IEnumerable<IPublishedElement>>("studentListProperty");
+
+
+
+                foreach (StudentList item in items)
+                {
+    <tr>
+        <td><h1>Student DOB:</h1></td>
+        <td><h1>@item.StudentDob</h1></td>
+    </tr>
+                    <tr>
+                        <td><h1>Student EmailAddress:</h1></td>
+                        <td><h1>@item.StudentEmail</h1></td>
+                    </tr>
+                                    <tr>
+                                        <td><h1>Student Grades:</h1></td>
+                                        <td><h1>@item.StudentGrades</h1></td>
+                                    </tr>
+                } }
+            @{ 
+                var items2 = Model.Value<IEnumerable<IPublishedElement>>("testimonialSlider"); 
+
+                }
+               @foreach (Slider item in items2)
+                {
+                    <tr>
+                        <td><h1>Author Name:</h1></td>
+                        <td><h1>@item.AuthorName</h1></td>
+                        <td><h1>@item.Value("authorName")</h1></td>
+                    </tr>
+                    <tr>
+                        <td><h1>Author Text:</h1></td>
+                        <td><h1>@item.AuthorText</h1></td>
+                    </tr>
+ } 
+
+
+
+        </tbody>
+    </table>
+</body>
+</html>
+@using (Html.BeginUmbracoForm<MyController>("Index"))
+{
+<input type="submit" />}
+

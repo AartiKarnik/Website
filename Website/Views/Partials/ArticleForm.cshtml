@@ -1,0 +1,55 @@
+﻿@model Website.Models.ArticleModel
+
+@using(Html.BeginForm("Submit","ArticleForm"))
+{ 
+    <h2>The article</h2>
+
+    <div class="form-group">
+        @Html.LabelFor(m=>m.Name)
+        @Html.TextBoxFor(m=>m.Summary, new { @class= "form-control" })
+        @*<label for="articleTitle">Article title</label>
+        <input type="text" class="form-control" name="articleTitle" />*@
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Summary)
+        @Html.TextAreaFor(m=>m.Summary, new { @class= "form-control" })
+        @*<label for="summary">Summary of the article</label>
+        <textarea name="summary" class="form-control" rows="2"></textarea>*@
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m=>m.FeaturedImage)
+        
+        @*<label for="featuredImage">Upload an image for your article</label>*@
+        <input type="file" name="FeaturedImage" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.ArticleContent)
+        @Html.TextAreaFor(m => m.ArticleContent, new { @class = "form-control", rows="10" })
+        @*<label for="articleContent">The content for the article</label>
+        <textarea name="articleContent" class="form-control" rows="10"></textarea>*@
+    </div>
+
+    <br />
+    <hr />
+    <h2>About the author</h2>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.AuthorName)
+        @Html.TextAreaFor(m => m.AuthorName, new { @class = "form-control" })
+        @*<label for="author">Author name</label>
+        <input type="text" class="form-control" name="author" />*@
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.AuthorTitle)
+        @Html.TextAreaFor(m => m.AuthorTitle, new { @class = "form-control" })
+        @*<label for="authorTitle">Author title</label>
+        <input type="text" class="form-control" name="authorTitle" />*@
+    </div>
+
+    <input type="submit" value="Submit" />
+
+}

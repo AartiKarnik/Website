@@ -1,0 +1,48 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Umbraco.Web.PublishedModels.MyHomeDocType>
+
+@{
+    Layout = null;
+}
+@*<h1>
+    @Model.Value("prop1")
+    <br />
+    @Model.Value("Aartiprop2")
+    <br />
+    @Model.Value("prop3")
+</h1>
+<h1>
+    @Model.Prop1
+    @Model.AartiProp2
+</h1>*@
+
+<html>
+<head></head>
+<body>
+    <table>
+        <thead><h1>Student Table</h1></thead>
+        <tbody>
+            <tr><td><h1>Student Class :</h1></td>
+            <td><h1>@Model.Prop1</h1></td>
+            </tr>
+            <tr>
+                <td><h1>Student Name</h1></td>
+                <td><h1>@Model.AartiProp2</h1></td>
+            </tr>
+      
+            
+            <tr>
+                <td><h1>Student Degree:</h1></td>
+                <td><h1>@Model.Studentdegree</h1></td>
+            </tr>
+            <tr>
+                <td><h1>Student Address:</h1></td>
+                <td><h1>@Model.Studentaddress</h1></td>
+            </tr>
+            <tr>
+                <td><h1>Student DOB:</h1></td>
+                <td><h1>@Model.Studentdob</h1></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
